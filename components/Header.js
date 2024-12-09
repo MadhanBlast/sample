@@ -91,7 +91,7 @@ export default function Header() {
 
     // navbar
     const handleNabarOpen = () => {
-        setNavbar(!navbar)a;
+        setNavbar(!navbar);
     }
 
     const handleNabarClose = () => {
