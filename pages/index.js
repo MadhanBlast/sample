@@ -239,7 +239,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        <div className="line" ></div>
 
 
         <h1 className="logo3">Recently Added</h1>
@@ -303,7 +303,7 @@ export default function Home() {
           )}
         </div>
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        <div className="line" ></div>
         <h1 className="logo3">Telugu Dubbed</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -374,7 +374,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        <div className="line" ></div>
 
 
         <h1 className="logo3">Series</h1>
@@ -445,7 +445,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        <div className="line" ></div>
         <h1 className="logo3">Animes</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -514,7 +514,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        <div className="line" ></div>
         <h1 className="logo3">Movies</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -583,7 +583,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        <div className="line" ></div>
         <h1 className="logo3">All Content</h1>
         <div className="moviescontainer">
           {loading ? (
