@@ -2939,8 +2939,14 @@ footer {
     /* Stronger black outline */
     transform: scale(1.05);
     position: relative;
+    left: 0;
 }
-
+@media (min-width: 768px) {
+    .logo3 {
+        font-size: 2.5rem; /* Adjust font size for desktop */
+        margin: 10px 40px; /* Adjust margins for better spacing */
+    }
+}
 .card {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
