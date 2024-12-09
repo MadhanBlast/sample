@@ -4,39 +4,52 @@
     box-sizing: border-box;
 }
 .mobile-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #222;
-    border-top: 1px solid #444;
-    padding: 10px 0;
-    z-index: 1000;
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  border-top: 1px solid #444;
+  z-index: 1000;
 }
 
-.mobile-nav a, .mobile-nav div {
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    flex-grow: 1;
+.bottom-navigation ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
 }
 
-.mobile-nav a.active, .mobile-nav a:hover, .mobile-nav div:hover {
-    color: #FFD700;
+.bottom-navigation ul li {
+  text-align: center;
 }
 
-.mobile-nav span {
-    display: block;
-    font-size: 0.75rem;
-    margin-top: 5px;
+.bottom-navigation ul li a,
+.bottom-navigation ul li button {
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.mobile-nav svg {
-    font-size: 1.5rem;
+.bottom-navigation ul li a:hover,
+.bottom-navigation ul li button:hover {
+  color: #f39c12; /* Highlight color */
 }
+
+.bottom-navigation ul li span {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 
 html,
 body {
