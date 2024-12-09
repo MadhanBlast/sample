@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { IoClose } from "react-icons/io5";
 import { BiSearch } from "react-icons/bi";
-import { FaBars, FaStar } from "react-icons/fa";
+import { FaHome, FaSearch, FaTv, FaPlay, FaFilm, FaBars, FaStar } from "react-icons/fa";
 import useFectchData from "@/hooks/useFetchData";
 
 export default function Header() {
@@ -110,103 +110,115 @@ export default function Header() {
     return <>
 
         <nav className="header">
-            <h1 className="logo1" data-text="&nbsp;Anime in telugu&nbsp;">
-                <a>Anime in Telugu&nbsp;</a>
-            </h1>
+    <h1 className="logo1" data-text="&nbsp;Anime in Telugu&nbsp;">
+        <a>Anime in Telugu&nbsp;</a>
+    </h1>
 
-
-            <form className={searchbar ? "search_bar active" : "search_bar"} ref = {searchRef}>
-                <input type="text" placeholder="Search here..." value={movieshortname} onChange={(e) => setMovieshortname(e.target.value)} />
-
-                <div className="searchclose" onClick={handleSearchbarClose}><IoClose /></div>
-                {movieshortname && (
-                    <div className="search_results">
-                        {/*<h2>---: Search Result :---</h2>*/}
-                        <ul>
-                            {searchResult.length > 0 ? (
-                                // showing 20 search results by matching words
-                                searchResult.slice(0, 20).map((movie) => (
-                                    <Link onClick={handleMovieClick} key={movie._id} href={`/movies/${movie.slug}`}>
-                                        <div className="moviesearchlist">
-                                            <div>
-                                                <img src={movie.smposter} width={80} height={110} alt="image" />
-                                            </div>
-                                            <div className="searchbarinfo">
-                                                <h5>{movie.title}</h5>
-                                                <h4>Rating: <FaStar /><span>{movie.rating}</span></h4>
-                                                <h4>Release Year: {movie.year}</h4>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                ))
-                            ) : (
-                                <p>No Movie Found</p>
-                            )}
-                        </ul>
-                    </div>
-                )}
-            </form>
-
-            <div id={navbar ? "navbaractive" : "navbar"}>
-                <div className="navlogomovie">
-                    <h1 className="logo1" data-text="&nbsp;Makmovies&nbsp;">
-                        <a href="/">Anime in telugu&nbsp;</a>
-                    </h1>
-                    <div className="navclosesvg" onClick={handleNabarClose}><IoClose /></div>
-                </div>
-                <ul className={clicked ? "navbar active" : "navbar"} onClick={handleNabarClose}>
-                    <li>
-                        <Link href='/'
-                            className={activeLink === '/' ? 'active' : ''}
-                            onClick={() => handleLinkClick('/')}
-                        >Home</Link>
-                    </li>
-                    
-                    <li>
-                        <Link href='/newlyadded'
-                            className={activeLink === '/newlyadded' ? 'active' : ''}
-                            onClick={() => handleLinkClick('/newlyadded')}
-                        >Newly Arrived</Link>
-                    </li>
-                    <li>
-                        <Link href='/series'
-                            className={activeLink === '/series' ? 'active' : ''}
-                            onClick={() => handleLinkClick('/series')}
-                        >Series</Link>
-                    </li>
-                    <li>
-                        <Link href='/Anime'
-                            className={activeLink === '/Anime' ? 'active' : ''}
-                            onClick={() => handleLinkClick('/Anime')}
-                        >Animes</Link>
-                    </li>
-                    <li>
-                        <Link href='/films'
-                            className={activeLink === '/films' ? 'active' : ''}
-                            onClick={() => handleLinkClick('/films')}
-                        >Movies</Link>
-                    </li>
-                    {/*<li>
-                        <Link href='/bollywood'
-                            className={activeLink === '/bollywood' ? 'active' : ''}
-                            onClick={() => handleLinkClick('/bollywood')}
-                        >Bollywood</Link>
-                    </li>
-                    <li>
-                        <Link href='/hollywood'
-                            className={activeLink === '/hollywood' ? 'active' : ''}
-                            onClick={() => handleLinkClick('/hollywood')}
-                        >Hollywood</Link>
-                    </li>*/}
-
+    <form className={searchbar ? "search_bar active" : "search_bar"} ref={searchRef}>
+        <input
+            type="text"
+            placeholder="Search here..."
+            value={movieshortname}
+            onChange={(e) => setMovieshortname(e.target.value)}
+        />
+        <div className="searchclose" onClick={handleSearchbarClose}><IoClose /></div>
+        {movieshortname && (
+            <div className="search_results">
+                <ul>
+                    {searchResult.length > 0 ? (
+                        searchResult.slice(0, 20).map((movie) => (
+                            <Link onClick={handleMovieClick} key={movie._id} href={`/movies/${movie.slug}`}>
+                                <div className="moviesearchlist">
+                                    <div>
+                                        <img src={movie.smposter} width={80} height={110} alt="image" />
+                                    </div>
+                                    <div className="searchbarinfo">
+                                        <h5>{movie.title}</h5>
+                                        <h4>Rating: <FaStar /><span>{movie.rating}</span></h4>
+                                        <h4>Release Year: {movie.year}</h4>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))
+                    ) : (
+                        <p>No Movie Found</p>
+                    )}
                 </ul>
             </div>
+        )}
+    </form>
 
-            <div className="mobile">
-                <BiSearch className="opensearchsvg" onClick={handleSearchbarOpen} />
-                <FaBars onClick={handleNabarOpen} />
-            </div>
-        </nav>
+    <div id={navbar ? "navbaractive" : "navbar"}>
+        <div className="navlogomovie">
+            <h1 className="logo1" data-text="&nbsp;Makmovies&nbsp;">
+                <a href="/">Anime in Telugu&nbsp;</a>
+            </h1>
+            <div className="navclosesvg" onClick={handleNabarClose}><IoClose /></div>
+        </div>
+        <ul className={clicked ? "navbar active" : "navbar"} onClick={handleNabarClose}>
+            <li>
+                <Link href='/'
+                    className={activeLink === '/' ? 'active' : ''}
+                    onClick={() => handleLinkClick('/')}
+                >Home</Link>
+            </li>
+            <li>
+                <Link href='/newlyadded'
+                    className={activeLink === '/newlyadded' ? 'active' : ''}
+                    onClick={() => handleLinkClick('/newlyadded')}
+                >Newly Arrived</Link>
+            </li>
+            <li>
+                <Link href='/series'
+                    className={activeLink === '/series' ? 'active' : ''}
+                    onClick={() => handleLinkClick('/series')}
+                >Series</Link>
+            </li>
+            <li>
+                <Link href='/Anime'
+                    className={activeLink === '/Anime' ? 'active' : ''}
+                    onClick={() => handleLinkClick('/Anime')}
+                >Animes</Link>
+            </li>
+            <li>
+                <Link href='/films'
+                    className={activeLink === '/films' ? 'active' : ''}
+                    onClick={() => handleLinkClick('/films')}
+                >Movies</Link>
+            </li>
+        </ul>
+    </div>
+
+    <div className="mobile">
+        <BiSearch className="opensearchsvg" onClick={handleSearchbarOpen} />
+        <FaBars onClick={handleNabarOpen} />
+    </div>
+
+    {/* Mobile Bottom Navigation */}
+    <nav className="mobile-nav">
+        <Link href="/" className={activeLink === '/' ? 'active' : ''} onClick={() => handleLinkClick('/')}>
+            <FaHome />
+            <span>Home</span>
+        </Link>
+        <div onClick={handleSearchbarOpen}>
+            <FaSearch />
+            <span>Search</span>
+        </div>
+        <Link href="/series" className={activeLink === '/series' ? 'active' : ''} onClick={() => handleLinkClick('/series')}>
+            <FaTv />
+            <span>Series</span>
+        </Link>
+        <Link href="/Anime" className={activeLink === '/Anime' ? 'active' : ''} onClick={() => handleLinkClick('/Anime')}>
+            <FaPlay />
+            <span>Anime</span>
+        </Link>
+        <Link href="/films" className={activeLink === '/films' ? 'active' : ''} onClick={() => handleLinkClick('/films')}>
+            <FaFilm />
+            <span>Movies</span>
+        </Link>
+    </nav>
+</nav>
+
 
     </>
 }
