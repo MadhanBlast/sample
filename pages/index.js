@@ -1,3 +1,4 @@
+
 import WelcomeAnimation from "@/components/WelcomeAnimation";
 import useFectchData from "@/hooks/useFetchData";
 import Head from "next/head";
