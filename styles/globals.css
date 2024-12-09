@@ -710,7 +710,7 @@ nav.sticky .mobile svg {
 /* *************************** card scroll   */
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   */
 .scrollcardssec {
-    margin: 0 20px;
+    margin: 0 0px;
     margin-top: 20px;
     width: 100%;
 }
@@ -2866,10 +2866,10 @@ footer {
 
     position: relative;
     text-shadow:
-        0 0 10px blue,
+        0 0 10px red,
         /* Red glow effect behind text */
-        0 0 20px blue,
-        0 0 30px blue,
+        0 0 20px red,
+        0 0 30px red,
         /* Stronger red glow */
         0 0 5px black;
     /* Black outline */
@@ -2916,7 +2916,7 @@ footer {
 .logo3 {
     font-family: 'Poppins', sans-serif;
     /* Choose your preferred font */
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     /* Font size */
     font-variant: small-caps;
     /* Apply small caps styling */
@@ -2943,7 +2943,7 @@ footer {
 }
 @media (min-width: 768px) {
     .logo3 {
-        font-size: 2.5rem; /* Adjust font size for desktop */
+        font-size: 2rem; /* Adjust font size for desktop */
         margin: 10px 40px; /* Adjust margins for better spacing */
     }
 }
