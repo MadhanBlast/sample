@@ -2931,7 +2931,7 @@ footer {
     font-weight: 400;
     /* Regular weight */
     text-align: left;
-    left: 65px;
+    
     /* Align text to the left */
     margin: 10px;
     /* Margin around the logo */
@@ -2947,7 +2947,7 @@ footer {
     /* Stronger black outline */
     transform: scale(1.05);
     position: relative;
-    left: 0;
+    left: 10px;
 }
 @media (min-width: 768px) {
     .logo3 {
