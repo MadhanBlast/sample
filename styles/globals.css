@@ -204,7 +204,7 @@ nav.sticky {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: left;
 }
 
 .navlogomovie {
@@ -693,7 +693,7 @@ nav.sticky .mobile svg {
 }
 
 .tranding_bx li .active span {
-    background: red;
+    background: blue;
 }
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   */
@@ -2172,7 +2172,8 @@ nav.sticky .mobile svg {
 
     #navbaractive {
         position: fixed;
-        right: 0;
+        right: 0px;
+
         top: 0;
         flex-direction: column;
         display: flex;
@@ -2213,7 +2214,7 @@ nav.sticky .mobile svg {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid rgba(255, 94, 94, 0.601);
+        border-bottom: 1px solid blue;
         padding-bottom: 2rem;
         padding-top: 1rem;
     }
@@ -2866,19 +2867,7 @@ footer {
     /* Transition for smooth effect */
 }
 
-/* Hover effect */
-.logo1:hover {
-    text-shadow:
-        0 0 15px blue,
-        /* Intensify red glow on hover */
-        0 0 30px blue,
-        0 0 40px blue,
-        /* Stronger red glow */
-        0 0 10px black;
-    /* Stronger black outline */
-    transform: scale(1.05);
-    /* Slightly scale up the logo */
-}
+
 
 
 .logo2 {
@@ -3008,4 +2997,4 @@ footer {
       transform: rotate(360deg);
     }
   }
-  
+
