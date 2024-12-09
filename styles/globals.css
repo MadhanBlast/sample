@@ -648,7 +648,15 @@ nav.sticky .mobile svg {
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   */
 /* *************************** tranding box   */
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   */
-
+.line {
+    width: 100%; /* Adjust width as needed */
+    height: 1px; /* Adjust thickness as needed */
+    background-color: white; /* Choose your desired color */
+    opacity: 0.3;
+    margin-top: 0px;
+     /* Adjust opacity (0 is fully transparent, 1 is fully opaque) */
+  }
+  
 .tranding_bx {
     width: 90%;
     height: auto;
