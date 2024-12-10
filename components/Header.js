@@ -197,15 +197,7 @@ export default function Header() {
         </li>
       </ul>
 
-      {/* Search Bar */}
-      <div className={/* Condition for active search bar */ false ? "search-bar active" : "search-bar"}>
-        <input
-          type="text"
-          placeholder="Search here..."
-          ref={searchInputRef} // Attach the ref to the input
-        />
-        <button onClick={handleSearchbarClose}>Close</button>
-      </div>
+      
     </div>
 </nav>
         
