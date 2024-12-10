@@ -106,12 +106,7 @@ export default function Header() {
     }
     const searchInputRef = useRef(null);
 
-  const handleSearchbarOpen = () => {
-    // Logic to open the search bar
-    if (searchInputRef.current) {
-      searchInputRef.current.focus(); // Focus on the input field
-    }
-  };
+  const handleSearchbarOpen = () => setSearchbar(true);
     
     return <>
         <nav className="header">
