@@ -115,8 +115,6 @@ export default function Header() {
   </h1>
 
   {/* Search Bar */}
-  <form className={searchbar ? "search_bar active" : "search_bar"} ref={searchRef}>
-  
     <div className="bottom-navigation">
       <ul>
         <li>
