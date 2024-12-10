@@ -108,6 +108,37 @@ export default function Header() {
 
   const handleSearchbarOpen = () => setSearchbar(true);
 
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setSearchbar(false); // Close search bar
+      setMovieshortname(""); // Clear search input
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  document.addEventListener("touchstart", handleClickOutside); // For mobile
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+    document.removeEventListener("touchstart", handleClickOutside);
+  };
+}, []);
+
+useEffect(() => {
+  const handleRouteChange = () => {
+    setSearchbar(false); // Close search bar
+    setMovieshortname(""); // Clear search input
+  };
+
+  router.events.on("routeChangeStart", handleRouteChange);
+
+  return () => {
+    router.events.off("routeChangeStart", handleRouteChange);
+  };
+}, [router.events]);
+  
+
   return (
     <>
 <nav className="header">
