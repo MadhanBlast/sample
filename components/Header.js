@@ -165,40 +165,41 @@ export default function Header() {
   </form>
 
   {/* Bottom Navigation Bar */}
-  <div className="bottom-navigation">
-    <ul>
-      <li>
-        <Link href="/">
-          <FaHome />
-          <span>Home</span>
-        </Link>
-      </li>
-      <li>
-        <button onClick={handleSearchbarOpen}>
-          <FaSearch />
-          <span>Search</span>
-        </button>
-      </li>
-      <li>
-        <Link href="/series">
-          <FaTv />
-          <span>Series</span>
-        </Link>
-      </li>
-      <li>
-        <Link href="/Anime">
-          <FaPlay />
-          <span>Anime</span>
-        </Link>
-      </li>
-      <li>
-        <Link href="/films">
-          <FaFilm />
-          <span>Movies</span>
-        </Link>
-      </li>
-    </ul>
-  </div>
+<div className="bottom-navigation">
+  <ul>
+    <li>
+      <Link href="/" onClick={handleSearchbarClose}>
+        <FaHome />
+        <span>Home</span>
+      </Link>
+    </li>
+    <li>
+      <button onClick={handleSearchbarOpen}>
+        <FaSearch />
+        <span>Search</span>
+      </button>
+    </li>
+    <li>
+      <Link href="/series" onClick={handleSearchbarClose}>
+        <FaTv />
+        <span>Series</span>
+      </Link>
+    </li>
+    <li>
+      <Link href="/Anime" onClick={handleSearchbarClose}>
+        <FaPlay />
+        <span>Anime</span>
+      </Link>
+    </li>
+    <li>
+      <Link href="/films" onClick={handleSearchbarClose}>
+        <FaFilm />
+        <span>Movies</span>
+      </Link>
+    </li>
+  </ul>
+</div>
+
 </nav>
 
     </>
