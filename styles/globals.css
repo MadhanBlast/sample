@@ -3127,7 +3127,8 @@ footer {
     .logo3 {
         font-size: 2rem;
         margin: 10px 40px;
-
+    }
+}
 @media (min-width: 768px) {
     .logo3 {
         font-size: 2rem; /* Adjust font size for desktop */
@@ -3246,4 +3247,4 @@ footer {
   }
   
    
-    }
+    
