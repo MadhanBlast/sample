@@ -7,7 +7,7 @@ import { BiSearch } from "react-icons/bi";
 import { FaHome, FaSearch, FaTv, FaPlay, FaFilm, FaBars, FaStar } from "react-icons/fa";
 import useFectchData from "@/hooks/useFetchData";
 
-export default function Header() {
+export default function search() {
 
     // navbar header component scroll sticky
     useEffect(() => {
@@ -109,6 +109,9 @@ export default function Header() {
   const handleSearchbarOpen = () => setSearchbar(true);
   
    return <>
+       
+  <form className={searchbar ? "search_bar active" : "search_bar"} ref={searchRef}>
+  
         <nav className="header">
             <input
       type="text"
