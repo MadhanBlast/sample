@@ -99,14 +99,20 @@ export default function Header() {
     }
 
     // searchbar
-    const handleSearchbarOpen = () => {
-        setSearchbar(!searchbar);
-    }
+    
 
     const handleSearchbarClose = () => {
         setSearchbar(false);
     }
+    const searchInputRef = useRef(null);
 
+  const handleSearchbarOpen = () => {
+    // Logic to open the search bar
+    if (searchInputRef.current) {
+      searchInputRef.current.focus(); // Focus on the input field
+    }
+  };
+    
     return <>
         <nav className="header">
   <h1 className="logo1" data-text="&nbsp;Anime in Telugu&nbsp;">
@@ -162,41 +168,50 @@ export default function Header() {
     )}
   </form>
 
-  {/* Bottom Navigation Bar */}
-  <div className="bottom-navigation">
-    <ul>
-      <li>
-        <Link href="/">
-          <FaHome />
-          <span>Home</span>
-        </Link>
-      </li>
-      <li>
-        <button onClick={handleSearchbarOpen}>
-          <FaSearch />
-          <span>Search</span>
-        </button>
-      </li>
-      <li>
-        <Link href="/series">
-          <FaTv />
-          <span>Series</span>
-        </Link>
-      </li>
-      <li>
-        <Link href="/Anime">
-          <FaPlay />
-          <span>Anime</span>
-        </Link>
-      </li>
-      <li>
-        <Link href="/films">
-          <FaFilm />
-          <span>Movies</span>
-        </Link>
-      </li>
-    </ul>
-  </div>
+    <div className="bottom-navigation">
+      <ul>
+        <li>
+          <Link href="/" onClick={handleSearchbarClose}>
+            <FaHome />
+            <span>Home</span>
+          </Link>
+        </li>
+        <li>
+          <button onClick={handleSearchbarOpen}>
+            <FaSearch />
+            <span>Search</span>
+          </button>
+        </li>
+        <li>
+          <Link href="/series" onClick={handleSearchbarClose}>
+            <FaTv />
+            <span>Series</span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/Anime" onClick={handleSearchbarClose}>
+            <FaPlay />
+            <span>Anime</span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/films" onClick={handleSearchbarClose}>
+            <FaFilm />
+            <span>Movies</span>
+          </Link>
+        </li>
+      </ul>
+
+      {/* Search Bar */}
+      <div className={/* Condition for active search bar */ false ? "search-bar active" : "search-bar"}>
+        <input
+          type="text"
+          placeholder="Search here..."
+          ref={searchInputRef} // Attach the ref to the input
+        />
+        <button onClick={handleSearchbarClose}>Close</button>
+      </div>
+    </div>
 </nav>
         
         
