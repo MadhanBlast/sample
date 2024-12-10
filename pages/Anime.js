@@ -23,12 +23,10 @@ export default function Anime() {
       </Head>
 
       <section className="genrenamesec">
-        <div className="genrename">
-          <h1>Animes</h1>
+        <div className="logo3">
+         
           <p>
-            Dive into the world of Anime at 'Anime in Telugu'. Explore captivating
-            stories, unique characters, and mesmerizing visuals. Your ultimate
-            destination for Telugu-dubbed Anime!
+          All Animes
           </p>
         </div>
       </section>

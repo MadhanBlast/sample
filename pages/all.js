@@ -21,11 +21,10 @@ export default function all() {
       </Head>
 
       <section className="genrenamesec">
-      <div className="genrename">
-        <h1>All Animes & Series</h1>
+      <div className="logo3">
+        <h1></h1>
         <p>
-          Discover the best in Animes, series, and exclusive content at
-          Anime in telugu. Stay tuned for new releases and updates!
+        All Animes, Series & Movies
         </p>
       </div>
     </section>

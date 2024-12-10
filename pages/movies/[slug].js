@@ -37,53 +37,9 @@ export default function MoviesPost() {
                     />
                 </div>
                 <div className="mainmoviebx">
-                    <div className="leftdata">
-                        <div className="leftimgbx">
-                            <img
-                                src={alldata && alldata[0]?.smposter}
-                                alt="Poster"
-                                loading="lazy"
-                                style={smPosterStyles} // Apply dynamic styles
-                            />
+                    
 
 
-                            <div className='rating'>
-                                <h3>NAME</h3>
-                                <h4 className='uppercase'>{alldata && alldata[0]?.title}</h4>
-                            </div>
-                            <div className='rating'>
-                                <h3>LANGUAGE</h3>
-                                <h4 className='uppercase'>{alldata && alldata[0]?.language}</h4>
-                                <div className='rating'>
-                                    <h3>TOTAL EPISODES</h3>
-                                    <h4 className='uppercase'>{alldata && alldata[0]?.episodes}</h4>
-                                </div>
-                                <div className='rating'>
-                                    <h3>DURATION</h3>
-                                    <h4 className='uppercase'>{alldata && alldata[0]?.duration}</h4>
-                                </div>
-                                <div className='rating'>
-                                    <h3>QUALITY</h3>
-                                    <h4 className='uppercase'>{alldata && alldata[0]?.quality}</h4>
-                                </div>
-                                <div className='rating'>
-                                    <h3>SIZE</h3>
-                                    <h4 className='uppercase'>{alldata && alldata[0]?.size}</h4>
-                                </div>
-                                <h3>GENRE</h3>
-                                <h4 className='uppercase'>{alldata && alldata[0]?.genre.join(', ')}</h4>
-
-                                <div className='rating'>
-                                    <h3>YEAR</h3>
-                                    <h4 className='uppercase'>{alldata && alldata[0]?.year}</h4>
-                                </div>
-                            </div>
-
-
-
-
-                        </div>
-                    </div>
                     <div className='rightdata'>
                         <div className='movietitle'>
                             <h1>{alldata && alldata[0]?.slug.replaceAll('-', ' ').toUpperCase()}</h1>
@@ -93,8 +49,13 @@ export default function MoviesPost() {
                         <div className='moviedescription'>
                             <article className='movieinfo'>
 
-
-
+                            <div className='name-photo'>
+                            <img
+                                src={alldata && alldata[0]?.smposter}
+                                alt="Poster"
+                                loading="lazy"
+                                style={smPosterStyles} // Apply dynamic styles
+                            /></div>
 
                                 <table>
                                     <tbody>
@@ -270,6 +231,7 @@ export default function MoviesPost() {
 
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </>

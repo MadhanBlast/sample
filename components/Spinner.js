@@ -2,8 +2,8 @@
 
 export default function Spinner() {
     return <>
-        <div className="loader">
-            {/* <h2>M</h2> */}
-        </div>
+       <div class="loader-wrapper">
+    <div class="loader1"></div>
+</div>
     </>
 }

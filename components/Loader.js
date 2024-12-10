@@ -1,6 +1,8 @@
 export default function Loader() {
     return <>
 
-        <div class="loader1"></div>
+
+    <div class="loader2"></div>
+
     </>
 }

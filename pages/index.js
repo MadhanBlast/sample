@@ -90,6 +90,7 @@ export default function Home() {
       <div>
         <div className="swiper_top_main">
           <Swiper
+            
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -178,7 +179,7 @@ export default function Home() {
           ) : (
             <Swiper
               slidesPerView={3} // Default number of visible slides
-              spaceBetween={40} // Space between the slides
+              spaceBetween={50} // Space between the slides
               modules={[Pagination, Navigation]} // Required Swiper modules without autoplay
               breakpoints={{
                 1587: {
@@ -239,7 +240,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        
 
 
         <h1 className="logo3">Recently Added</h1>
@@ -251,7 +252,7 @@ export default function Home() {
           ) : (
             <Swiper
               slidesPerView={3} // Default visible slides
-              spaceBetween={40} // Space between the slides
+              spaceBetween={50} // Space between the slides
               loop={false} // Enable looping
               autoplay={{ delay: 3000, disableOnInteraction: true }} // Autoplay every 3 seconds
               modules={[Pagination, Navigation, Autoplay]} // Required SwiperJS modules
@@ -303,7 +304,7 @@ export default function Home() {
           )}
         </div>
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+       
         <h1 className="logo3">Telugu Dubbed</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -313,7 +314,7 @@ export default function Home() {
           ) : (
             <Swiper
               slidesPerView={3} // Default visible slides
-              spaceBetween={40} // Space between slides
+              spaceBetween={50} // Space between slides
               loop={true} // Enable looping
               autoplay={{ delay: 3500, disableOnInteraction: true }} // Autoplay every 3 seconds
               modules={[Pagination, Navigation, Autoplay]} // Required SwiperJS modules
@@ -374,7 +375,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        
 
 
         <h1 className="logo3">Series</h1>
@@ -386,7 +387,7 @@ export default function Home() {
           ) : (
             <Swiper
               slidesPerView={3} // Default visible slides
-              spaceBetween={40} // Space between slides
+              spaceBetween={50} // Space between slides
               loop={true} // Enable looping
               autoplay={{ delay: 4000, disableOnInteraction: true }} // Autoplay every 3 seconds
               modules={[Pagination, Navigation, Autoplay]} // Required SwiperJS modules
@@ -445,7 +446,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        
         <h1 className="logo3">Animes</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -455,7 +456,7 @@ export default function Home() {
           ) : (
             <Swiper
               slidesPerView={3} // Default visible slides
-              spaceBetween={40} // Space between slides
+              spaceBetween={50} // Space between slides
               loop={true} // Enable looping
               autoplay={{ delay: 4500, disableOnInteraction: true }} // Autoplay every 3 seconds
               modules={[Pagination, Navigation, Autoplay]} // Required SwiperJS modules
@@ -514,7 +515,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        
         <h1 className="logo3">Movies</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -524,7 +525,7 @@ export default function Home() {
           ) : (
             <Swiper
               slidesPerView={3} // Default number of visible slides
-              spaceBetween={40} // Space between the slides
+              spaceBetween={50} // Space between the slides
               loop={true} // Enable infinite looping
               autoplay={{ delay: 5000, disableOnInteraction: true }} // Auto sliding every 3 seconds
               modules={[Pagination, Navigation, Autoplay]} // Required Swiper modules
@@ -583,7 +584,7 @@ export default function Home() {
 
 
 
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+        <div className="line" ></div>
         <h1 className="logo3">All Content</h1>
         <div className="moviescontainer">
           {loading ? (
@@ -593,7 +594,7 @@ export default function Home() {
           ) : (
             <Swiper
               slidesPerView={3} // Default number of visible slides
-              spaceBetween={40} // Space between the slides
+              spaceBetween={50} // Space between the slides
               loop={true} // Enable infinite looping
               modules={[Pagination, Navigation]} // Required Swiper modules without autoplay
               breakpoints={{
@@ -661,7 +662,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="tranding_bx" style={{ marginTop: '40px' }}></div>
+       
       </div>
 
     </>

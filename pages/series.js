@@ -25,11 +25,10 @@ export default function series() {
         </Head>
        
         <section className="genrenamesec">
-        <div className="genrename">
-          <h1>Anime Web Series</h1>
+        <div className="logo3">
+         
           <p>
-            Discover the best in Series, and exclusive content at
-            Anime in telugu. Stay tuned for new releases and updates!
+           All Anime Web Series
           </p>
         </div>
       </section>

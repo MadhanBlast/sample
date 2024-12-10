@@ -25,12 +25,10 @@ export default function Films() {
       </Head>
 
       <section className="genrenamesec">
-        <div className="genrename">
-          <h1>Anime Movies</h1>
+        <div className="logo3">
+        
           <p>
-            Explore the world of Anime Movies in Telugu. From epic tales to thrilling dramas, 
-            experience a wide variety of Animes in your language. Your ultimate 
-            destination for Telugu-dubbed Animes!
+          All Anime Movies
           </p>
         </div>
       </section>
