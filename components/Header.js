@@ -125,10 +125,10 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/search">
-                <FaSearch />
+              <button>
+                <FaSearch className="opensearchsvg" onClick={handleSearchbarOpen}/>
                 <span>Search</span>
-              </Link>
+              </button 
             </li>
             <li>
               <Link href="/series" onClick={handleSearchbarClose}>
