@@ -4,51 +4,81 @@
     box-sizing: border-box;
 }
 
+/* Mobile Navigation Bar */
 .bottom-navigation {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #222;
-  border-top: 1px solid #444;
+  height: 50px; /* Reduced height */
+  background-color: #000; /* Black background */
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   z-index: 1000;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .bottom-navigation ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 0;
+  width: 100%;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .bottom-navigation ul li {
+  flex: 1;
   text-align: center;
 }
 
 .bottom-navigation ul li a,
 .bottom-navigation ul li button {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px; /* Smaller font size */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   background: none;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
 .bottom-navigation ul li a:hover,
 .bottom-navigation ul li button:hover {
-  color: #f39c12; /* Highlight color */
+  color: #f39c12; /* Highlight color for hover */
 }
 
 .bottom-navigation ul li span {
-  font-size: 12px;
-  margin-top: 5px;
+  font-size: 10px; /* Smaller text for labels */
+  margin-top: 3px; /* Reduced spacing */
+  color: #aaa;
 }
+
+.bottom-navigation ul li a.active,
+.bottom-navigation ul li button.active {
+  color: #f39c12; /* Highlight active link */
+}
+
+.bottom-navigation ul li span.active {
+  color: #f39c12;
+}
+
+/* Optional Styling for Icons */
+.bottom-navigation ul li svg {
+  font-size: 18px; /* Smaller icon size */
+}
+
+/* General Mobile Styling */
+body {
+  margin-bottom: 50px; /* Ensure content doesn't overlap the nav */
+}
+
 
 
 html,
