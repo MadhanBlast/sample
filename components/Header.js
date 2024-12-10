@@ -125,8 +125,8 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <button>
-                <FaSearch className="opensearchsvg" onClick={handleSearchbarOpen}/>
+              <button onClick={handleSearchbarOpen}>
+                <FaSearch/>
                 <span>Search</span>
               </button>
             </li>
