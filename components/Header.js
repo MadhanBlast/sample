@@ -117,9 +117,9 @@ export default function Header() {
   <h1 className="logo1" data-text="&nbsp;Anime in Telugu&nbsp;">
     <a>Anime in Telugu&nbsp;</a>
   </h1>
-</nav>
   
-<nav>
+  
+
   {/* Bottom Navigation Bar */}
 <div className="bottom-navigation">
   <ul>
