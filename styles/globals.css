@@ -3,6 +3,67 @@
     margin: 0;
     box-sizing: border-box;
 }
+.search-page {
+  padding: 20px;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+.moviesearchlist {
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.moviesearchlist img {
+  border-radius: 4px;
+}
+
+.searchbarinfo {
+  margin-left: 10px;
+}
+
+.searchbarinfo h5 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.searchbarinfo h4 {
+  margin: 5px 0;
+  font-size: 14px;
+}
 
 /* Mobile Navigation Bar */
 /* Mobile Bottom Navigation Bar */
