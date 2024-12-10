@@ -36,7 +36,9 @@
 }
 
 .search-results {
+
     color:white;
+
   margin-top: 20px;
 }
 
@@ -862,7 +864,11 @@ nav.sticky .mobile svg {
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   */
 .scrollcardssec {
     margin: 0 0px;
+
     margin-top: 9px;
+
+    margin-top: 20px;
+
     width: 100%;
 }
 
@@ -1150,8 +1156,13 @@ nav.sticky .mobile svg {
 
 .genremoviesec {
     border-top: 1px solid #444;
+
     margin: 5px 50px;
     padding: 5px 0;
+
+    margin: 50px 50px;
+    padding: 50px 0;
+
 }
 
 .genremovie {
@@ -3017,10 +3028,17 @@ footer {
 
     position: relative;
     text-shadow:
+
         0 0 5px red,
         /* Red glow effect behind text */
         0 0 5px red,
         0 0 5px red,
+
+        0 0 10px red,
+        /* Red glow effect behind text */
+        0 0 20px red,
+        0 0 30px red,
+
         /* Stronger red glow */
         0 0 5px black;
     /* Black outline */
@@ -3066,10 +3084,21 @@ footer {
 
 .logo3 {
     font-family: 'Poppins', sans-serif;
+
     font-size: 1.3rem;
+
+    /* Choose your preferred font */
+    font-size: 1.3rem;
+    /* Font size */
+ 
     font-variant: small-caps;
     font-weight: 400;
     text-align: left;
+
+
+    
+    /* Align text to the left */
+ 
     margin: 10px;
     color: white;
     text-shadow:
@@ -3081,6 +3110,7 @@ footer {
     position: relative;
     left: 10px;
 }
+
 
 .logo3::before {
     content: '';
@@ -3097,9 +3127,14 @@ footer {
     .logo3 {
         font-size: 2rem;
         margin: 10px 40px;
+
+@media (min-width: 768px) {
+    .logo3 {
+        font-size: 2rem; /* Adjust font size for desktop */
+        margin: 10px 40px; /* Adjust margins for better spacing */
+ 
     }
 }
-
 .card {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
@@ -3196,6 +3231,7 @@ footer {
       transform: rotate(360deg);
     }
   }
+  
   .name-photo {
     display: flex;
     justify-content: center; /* Horizontally center the image */
@@ -3209,3 +3245,5 @@ footer {
     height: auto;
   }
   
+   
+    }

@@ -31,7 +31,11 @@ export default function SearchPage() {
 
   return (
     <div className="search-page">
-      
+
+      <header>
+        <h1>Search Movies, Series, or Anime</h1>
+      </header>
+
 
       <div className="search-bar-container">
         <form className="search-bar">

@@ -240,7 +240,9 @@ export default function Home() {
 
 
 
-        
+
+        <div className="line" ></div>
+
 
 
         <h1 className="logo3">Recently Added</h1>
@@ -304,7 +306,11 @@ export default function Home() {
           )}
         </div>
 
+
        
+
+        <div className="line" ></div>
+
         <h1 className="logo3">Telugu Dubbed</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -375,7 +381,9 @@ export default function Home() {
 
 
 
-        
+
+        <div className="line" ></div>
+
 
 
         <h1 className="logo3">Series</h1>
@@ -446,7 +454,8 @@ export default function Home() {
 
 
 
-        
+        <div className="line" ></div>
+
         <h1 className="logo3">Animes</h1>
         <div className="scrollcardssec">
           {loading ? (
@@ -515,7 +524,8 @@ export default function Home() {
 
 
 
-        
+        <div className="line" ></div>
+
         <h1 className="logo3">Movies</h1>
         <div className="scrollcardssec">
           {loading ? (
