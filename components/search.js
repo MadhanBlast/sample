@@ -108,3 +108,54 @@ export default function Header() {
 
   const handleSearchbarOpen = () => setSearchbar(true);
   
+   return <>
+        <nav className="header">
+            <input
+      type="text"
+      placeholder="Search here..."
+      value={movieshortname}
+      onChange={(e) => setMovieshortname(e.target.value)}
+    />
+    <div className="searchclose" onClick={handleSearchbarClose}>
+      <IoClose />
+    </div>
+    {movieshortname && (
+      <div className="search_results">
+        <ul>
+          {searchResult.length > 0 ? (
+            searchResult.slice(0, 20).map((movie) => (
+              <Link
+                onClick={handleMovieClick}
+                key={movie._id}
+                href={`/movies/${movie.slug}`}
+              >
+                <div className="moviesearchlist">
+                  <div>
+                    <img
+                      src={movie.smposter}
+                      width={80}
+                      height={110}
+                      alt="image"
+                    />
+                  </div>
+                  <div className="searchbarinfo">
+                    <h5>{movie.title}</h5>
+                    <h4>
+                      Rating: <FaStar />
+                      <span>{movie.rating}</span>
+                    </h4>
+                    <h4>Release Year: {movie.year}</h4>
+                  </div>
+                </div>
+              </Link>
+            ))
+          ) : (
+            <p>No Movie Found</p>
+          )}
+        </ul>
+      </div>
+    )}
+  </form>
+      </nav>
+      </>
+}
