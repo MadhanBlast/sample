@@ -1,54 +1,110 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import Head from "next/head";
+
 import { IoClose } from "react-icons/io5";
-import { FaSearch } from "react-icons/fa";
+import { BiSearch } from "react-icons/bi";
+import { FaHome, FaSearch, FaTv, FaPlay, FaFilm, FaBars, FaStar } from "react-icons/fa";
+import useFectchData from "@/hooks/useFetchData";
 
-export default function SearchPage() {
-  const searchInputRef = useRef(null);
-  const [searchTerm, setSearchTerm] = useState('');
+export default function Header() {
 
-  // Automatically focus on input field after the component has mounted
-  useEffect(() => {
-    if (searchInputRef.current) {
-      searchInputRef.current.focus();
+    // navbar header component scroll sticky
+    useEffect(() => {
+        const handleScroll = () => {
+            const header = document.querySelector('nav');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, []);
+
+    // functions for navlist item page routing active status
+    const router = useRouter();
+    const [clicked, setClicked] = useState(false);
+    const [navbar, setNavbar] = useState(false);
+    const [searchbar, setSearchbar] = useState(false);
+
+    const [activeLink, setActiveLink] = useState('/');
+
+    // search function by title of the movie
+    const [movieshortname, setMovieshortname] = useState('');
+    const [searchResult, setSearchResult] = useState(null);
+    const [error, setError] = useState(null);
+    // fetch data from api
+    const { alldata, loading } = useFectchData(`/api/getmovies`);
+
+    // filter from published movies required
+    const publishedData = alldata.filter(ab => ab.status === "publish");
+
+    // function to handle search
+    useEffect(() => {
+        if (!movieshortname.trim()) {
+            setSearchResult([]);
+            return;
+        }
+
+        const filteredMovies = publishedData.filter(movie => movie.title.toLowerCase().includes(movieshortname.toLowerCase()));
+
+        setSearchResult(filteredMovies);
+    }, [movieshortname]);
+
+    const handleMovieClick = () => {
+        setMovieshortname('');
     }
-  }, []);
 
-  const handleSearchInputChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+    const searchRef = useRef(null);
 
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    console.log("Search term submitted:", searchTerm);
-  };
+    // function for when clcik outside of the search bar will be close
+    const handleClickOutside = (event) => {
+        if (searchRef.current && !searchRef.current.contains(event.target)) {
+            setMovieshortname('');
 
-  return (
-    <>
-      <Head>
-        <title>Search | My Website</title>
-      </Head>
-      <div className="search-page-container">
-        <div className="search-container">
-          <form onSubmit={handleSearchSubmit} className="search-form">
-            <input
-              type="text"
-              ref={searchInputRef}
-              value={searchTerm}
-              onChange={handleSearchInputChange}
-              placeholder="Type to search..."
-            />
-            <button type="submit">
-              <FaSearch />
-            </button>
-          </form>
-          {searchTerm && (
-            <div className="search-results">
-              <p>Searching for: {searchTerm}</p>
-            </div>
-          )}
-        </div>
-      </div>
-    </>
-  );
-}
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+    })
+
+    const handleClick = () => {
+        setClicked(!clicked);
+    }
+
+    const handleLinkClick = (Link) => {
+        setActiveLink(Link);
+        setClicked(false);
+    }
+
+    useEffect(() => {
+        // Update active link state when the page is reloaded
+        setActiveLink(router.pathname);
+    }, [router.pathname]);
+
+    // navbar
+    const handleNabarOpen = () => {
+        setNavbar(!navbar);
+    }
+
+    const handleNabarClose = () => {
+        setNavbar(false);
+    }
+
+    // searchbar
+    
+
+    const handleSearchbarClose = () => {
+        setSearchbar(false);
+    }
+    const searchInputRef = useRef(null);
+
+  const handleSearchbarOpen = () => setSearchbar(true);
+  
