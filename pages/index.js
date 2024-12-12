@@ -16,7 +16,7 @@ import { FaClapperboard } from "react-icons/fa6";
 import genres from "./genre/[genre]";
 import category from "./genre";
 import Spinner from "@/components/Spinner";
-
+import VerifyComponent from "../components/VerifyComponent";
 
 
 
@@ -86,6 +86,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+    <div style={{ padding: "20px", textAlign: "center" }}>
+      <h1>Welcome to the App</h1>
+      <p>Please verify yourself to proceed.</p>
+      <VerifyComponent />
+    </div>
 
       <div>
         <div className="swiper_top_main">
