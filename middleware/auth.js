@@ -1,6 +1,9 @@
-import jwt from "jsonwebtoken";
+const jwt = require('jsonwebtoken');
+// or if using ES modules
+import jwt from 'jsonwebtoken';
 
-const SECRET_KEY = "your_secret_key";
+
+const SECRET_KEY = "secret_key";
 
 export function verifyToken(req, res, next) {
   const token = req.headers.authorization?.split(" ")[1];
